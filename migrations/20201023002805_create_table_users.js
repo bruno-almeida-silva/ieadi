@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
         table.increments('id').primary()
         table.string('name', 50).notNull()
         table.string('email', 100).notNull().unique()
+        table.string('password').notNull()
         table.integer('churchId').unsigned()
         table.foreign('churchId').references('churchs.id')
         table.string('role', 20).notNull()

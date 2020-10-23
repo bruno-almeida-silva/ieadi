@@ -3,6 +3,7 @@ const db = require('./config/db') //knex
 const consign = require('consign')
 
 consign()
+    .include('./config/passport.js')
     .then('./config/middlewares.js')
     .then('./api')
     .then('./config/routes.js')

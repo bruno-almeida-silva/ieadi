@@ -27,8 +27,6 @@ module.exports = app => {
                 res.json({
                     name: user.name,
                     email: user.email,
-                    churchId: user.churchId,
-                    role: user.role,
                     token: jwt.encode(payload, authSecret),
                 })
             })
